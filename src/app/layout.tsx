@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ColorModeScript, UIProvider } from "@yamada-ui/react";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,8 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <ColorModeScript />
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
