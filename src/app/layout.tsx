@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ColorModeScript, UIProvider } from "@yamada-ui/react";
+import { ColorModeScript } from "@yamada-ui/react";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {

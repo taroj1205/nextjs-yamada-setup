@@ -1,11 +1,16 @@
+import { YamadaUIIcon } from "@/components/icons";
 import { ThemeSwitcher } from "@/components/theme-switcher";
+import { GithubIcon } from "@yamada-ui/lucide";
 import {
   Button,
   Container,
   Heading,
+  IconButton,
   Text,
   Link as UILink,
   VStack,
+  HStack,
+  Separator,
 } from "@yamada-ui/react";
 import Link from "next/link";
 
@@ -28,6 +33,23 @@ export default function Home() {
         </Button>
         <Text>Yamada UI already has a support for Dark mode.</Text>
         <ThemeSwitcher />
+        <Separator />
+        <Heading as="h2">Some links</Heading>
+        <HStack>
+          <IconButton
+            as={Link}
+            href="https://github.com/taroj1205/nextjs-yamada-setup"
+          >
+            <GithubIcon />
+          </IconButton>
+          <IconButton
+            as={Link}
+            href="https://yamada-ui.com/"
+            colorScheme="purple"
+          >
+            <YamadaUIIcon />
+          </IconButton>
+        </HStack>
       </VStack>
     </Container>
   );

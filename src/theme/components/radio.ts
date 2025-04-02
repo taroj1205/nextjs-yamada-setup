@@ -28,7 +28,6 @@ export const Radio: ComponentMultiStyle<"Radio"> = {
             bg: [`${c}.600`, `${c}.700`],
           },
         },
-        // eslint-disable-next-line perfectionist/sort-objects
         _disabled: {
           _before: {
             bg: "blackAlpha.400",

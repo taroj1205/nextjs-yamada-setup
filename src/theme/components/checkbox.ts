@@ -20,7 +20,6 @@ export const Checkbox: ComponentMultiStyle<"Checkbox"> = {
           bg: [`${c}.600`, `${c}.700`],
           borderColor: [`${c}.600`, `${c}.700`],
         },
-        // eslint-disable-next-line perfectionist/sort-objects
         _disabled: {
           bg: ["blackAlpha.400", "whiteAlpha.300"],
           borderColor: ["transparent", "transparent"],
