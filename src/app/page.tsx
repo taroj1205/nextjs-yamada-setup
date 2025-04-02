@@ -22,11 +22,7 @@ export default function Home() {
         <Heading>Next.js + Yamada UI</Heading>
 
         <CodeBlock
-          code={`
-<UILink as={Link} href="/demo">
-  Using Next.js Link example
-</UILink>
-          `}
+          code={`<UILink as={Link} href="/demo">Using Next.js Link example</UILink>`}
         >
           <UILink as={Link} href="/demo">
             Using Next.js Link example
@@ -34,11 +30,7 @@ export default function Home() {
         </CodeBlock>
 
         <CodeBlock
-          code={`
-<UILink as="a" href="/demo">
-  Using {'<a />'} example
-</UILink>
-          `}
+          code={`<UILink as="a" href="/demo">Using {'<a />'} example</UILink>`}
         >
           <UILink as="a" href="/demo">
             Using {"`<a />`"} example

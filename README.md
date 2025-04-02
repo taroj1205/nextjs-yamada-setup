@@ -6,13 +6,8 @@ This is a modern web application template that integrates [Next.js](https://next
 
 - 🎨 **Theme Switching** - Built-in support for light, dark, and system themes
 - 🔗 **Multiple Link Variations** - Examples of different link implementations:
-  - Next.js Link integration
-  - Standard anchor tags
-  - Button-styled links
-  - Icon buttons
 - 🎯 **Component Examples** - Practical examples of Yamada UI components
 - 📱 **Responsive Design** - Mobile-friendly interface
-- ⚡ **Fast Development** - Hot reloading and optimized build process
 
 ## Getting Started
 

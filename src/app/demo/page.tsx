@@ -21,7 +21,7 @@ export const Button = ui("button", {
     w: "fit-content",
     _hover: { bg: "purple.500" },
   },
-});
+})
       `}
       >
         <Button as={Link} href="/">
