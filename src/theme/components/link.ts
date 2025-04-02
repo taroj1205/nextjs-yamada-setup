@@ -16,4 +16,7 @@ export const Link: ComponentStyle<"Link"> = {
       textDecoration: "underline",
     },
   },
+  defaultProps: {
+    w: "fit-content",
+  },
 };

@@ -1,3 +1,4 @@
+import { CodeBlock } from "@/components/code-block";
 import { YamadaUIIcon } from "@/components/icons";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { GithubIcon } from "@yamada-ui/lucide";
@@ -19,22 +20,53 @@ export default function Home() {
     <Container>
       <VStack>
         <Heading>Next.js + Yamada UI</Heading>
-        <UILink as={Link} href="/demo">
-          Using Next.js Link example
-        </UILink>
-        <UILink as="a" href="/demo">
-          Using {"`<a />`"} example
-        </UILink>
-        <Button as={Link} href="/demo" variant="link">
-          Using Button but Link-style
-        </Button>
-        <Button as={Link} href="/demo" colorScheme="primary">
-          Button Link
-        </Button>
+
+        <CodeBlock
+          code={`
+<UILink as={Link} href="/demo">
+  Using Next.js Link example
+</UILink>
+          `}
+        >
+          <UILink as={Link} href="/demo">
+            Using Next.js Link example
+          </UILink>
+        </CodeBlock>
+
+        <CodeBlock
+          code={`
+<UILink as="a" href="/demo">
+  Using {'<a />'} example
+</UILink>
+          `}
+        >
+          <UILink as="a" href="/demo">
+            Using {"`<a />`"} example
+          </UILink>
+        </CodeBlock>
+
+        <CodeBlock
+          code={`<Button as={Link} href="/demo" variant="link">Using Button but Link-style</Button>`}
+        >
+          <Button as={Link} href="/demo" variant="link">
+            Using Button but Link-style
+          </Button>
+        </CodeBlock>
+
+        <CodeBlock
+          code={`<Button as={Link} href="/demo" colorScheme="primary">Button Link</Button>`}
+        >
+          <Button as={Link} href="/demo" colorScheme="primary">
+            Button Link
+          </Button>
+        </CodeBlock>
+
         <Text>Yamada UI already has a support for Dark mode.</Text>
         <ThemeSwitcher />
+
         <Separator />
         <Heading as="h2">Some links</Heading>
+
         <HStack>
           <IconButton
             as={Link}

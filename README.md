@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js + Yamada UI Template
+
+This is a modern web application template that integrates [Next.js](https://nextjs.org) with [Yamada UI](https://yamada-ui.com/), providing a powerful foundation for building beautiful, responsive, and theme-aware applications.
+
+## Features
+
+- 🎨 **Theme Switching** - Built-in support for light, dark, and system themes
+- 🔗 **Multiple Link Variations** - Examples of different link implementations:
+  - Next.js Link integration
+  - Standard anchor tags
+  - Button-styled links
+  - Icon buttons
+- 🎯 **Component Examples** - Practical examples of Yamada UI components
+- 📱 **Responsive Design** - Mobile-friendly interface
+- ⚡ **Fast Development** - Hot reloading and optimized build process
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- pnpm (recommended) or npm
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/nextjs-yamada-setup.git
+cd nextjs-yamada-setup
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the development server:
+
+```bash
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+```
+src/
+  ├── app/              # Next.js app directory
+  ├── components/       # Reusable UI components
+  └── theme/           # Yamada UI theme customization
+      ├── components/   # Component-specific theme customizations
+      ├── styles/      # Global styles and CSS customizations
+      ├── tokens/      # Design tokens (colors, spacing, etc.)
+      ├── config.ts    # Theme configuration (color mode, breakpoints)
+      ├── index.ts     # Theme entry point
+      └── semantics.ts # Semantic token definitions
+
+The theme directory showcases Yamada UI's powerful customization capabilities:
+- **Component Customization**: Define component-specific styles, variants, and sizes in `components/`
+- **Global Styles**: Customize application-wide styles and CSS variables
+- **Design Tokens**: Manage design system tokens like colors, spacing, and typography
+- **Semantic Tokens**: Define semantic aliases for design tokens (e.g., "primary" → specific color)
+- **Theme Config**: Control theme behavior like initial color mode and breakpoint settings
+```
+
+## Usage Examples
+
+### Theme Switching
+
+The application includes a built-in theme switcher component that allows users to toggle between light, dark, and system themes:
+
+```tsx
+<ThemeSwitcher />
+```
+
+### Link Variations
+
+Multiple ways to implement links are demonstrated:
+
+```tsx
+// Using Next.js Link
+<UILink as={Link} href="/demo">
+  Link text
+</UILink>
+
+// Using standard anchor
+<UILink as="a" href="/demo">
+  Link text
+</UILink>
+
+// Using Button as Link
+<Button as={Link} href="/demo" variant="link">
+  Button Link
+</Button>
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
+- [Yamada UI Documentation](https://yamada-ui.com/) - explore Yamada UI components and features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
