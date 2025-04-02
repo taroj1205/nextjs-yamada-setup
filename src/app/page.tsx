@@ -38,9 +38,9 @@ export default function Home() {
         </CodeBlock>
 
         <CodeBlock
-          code={`<Button as={Link} href="/demo" variant="link">Using Button but Link-style</Button>`}
+          code={`<Button as={Link} href="/demo" variant="link" color="link">Using Button but Link-style</Button>`}
         >
-          <Button as={Link} href="/demo" variant="link">
+          <Button as={Link} href="/demo" variant="link" color="link">
             Using Button but Link-style
           </Button>
         </CodeBlock>
