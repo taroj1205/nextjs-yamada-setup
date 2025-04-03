@@ -1,11 +1,4 @@
-import {
-  Box,
-  Float,
-  IconButton,
-  ScrollArea,
-  useClipboard,
-  VStack,
-} from "@yamada-ui/react";
+import { Box, ScrollArea, VStack } from "@yamada-ui/react";
 import { Markdown } from "@yamada-ui/markdown";
 import { FC, memo, type PropsWithChildren } from "react";
 import { format } from "prettier";
