@@ -1,4 +1,4 @@
-import { VStack } from "@yamada-ui/react";
+import { ScrollArea, VStack } from "@yamada-ui/react";
 import { Markdown } from "@yamada-ui/markdown";
 import { FC, memo, type PropsWithChildren } from "react";
 import { format } from "prettier";
@@ -11,12 +11,12 @@ export const CodeBlock: FC<PropsWithCode> = memo(async ({ children, code }) => {
   return (
     <VStack>
       {children}
-      <Markdown>{`
+      <ScrollArea as={Markdown} maxH="xl">{`
 \`\`\`tsx
 ${(await format(code.trim(), { parser: "babel" })).replace(";", "")}
 \`\`\`
 
-    `}</Markdown>
+    `}</ScrollArea>
     </VStack>
   );
 });

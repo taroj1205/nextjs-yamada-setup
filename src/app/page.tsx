@@ -56,6 +56,10 @@ export default function Home() {
         <Text>Yamada UI already has a support for Dark mode.</Text>
         <ThemeSwitcher />
 
+        <Button as={Link} href="/more-examples" colorScheme="secondary">
+          See More examples
+        </Button>
+
         <Separator />
         <Heading as="h2">Some links</Heading>
 
