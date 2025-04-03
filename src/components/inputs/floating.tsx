@@ -10,40 +10,34 @@ export const FloatingLabel: FC = memo(() => {
       </Heading>
       <CodeBlock
         code={`
-      <FormControl position="relative" w="sm">
-        <Input className="peer" />
-        <Label
-          position="absolute"
-          top="50%"
-          left="sm"
-          transform="translateY(-50%)"
-          px="xs"
-          transition="all 0.2s"
-          color="muted"
-          _peerFocus={{
-            top: 0,
-            left: "sm",
-            transform: "translateY(-50%) scale(0.8)",
-            zIndex: 1,
-            bg: ["white", "black"],
-            color: ["black", "white"],
-          }}
+        <FormControl
+          position="relative"
+          w="sm"
+          errorMessage="Email is required."
         >
-          Email
-        </Label>
-      </FormControl>
-    `}
-      >
-        <FormControl position="relative" w="sm">
-          <Input className="peer" />
+          <Input
+            className="peer"
+            type="email"
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck="false"
+            placeholder="Email"
+            _placeholder={{
+              opacity: 0,
+            }}
+          />
           <Label
             position="absolute"
-            top="50%"
+            top="0"
             left="sm"
-            transform="translateY(-50%)"
             px="xs"
             transition="all 0.2s"
-            color="muted"
+            mb="0"
+            _peerPlaceholderShown={{
+              transform: "translateY(25%)",
+              color: "gray",
+            }}
             _peerFocus={{
               top: 0,
               left: "sm",
@@ -51,6 +45,68 @@ export const FloatingLabel: FC = memo(() => {
               zIndex: 1,
               bg: ["white", "black"],
               color: ["black", "white"],
+            }}
+            css={{
+              "&:not(:placeholder-shown)": {
+                top: 0,
+                left: "sm",
+                transform: "translateY(-50%) scale(0.8)",
+                zIndex: 1,
+                bg: ["white", "black"],
+                color: ["black", "white"],
+              },
+            }}
+          >
+            Email
+          </Label>
+        </FormControl>
+    `}
+      >
+        <FormControl
+          position="relative"
+          w="sm"
+          errorMessage="Email is required."
+        >
+          <Input
+            className="peer"
+            type="email"
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck="false"
+            placeholder="Email"
+            _placeholder={{
+              opacity: 0,
+            }}
+          />
+          <Label
+            position="absolute"
+            top="0"
+            left="sm"
+            px="xs"
+            transition="all 0.2s"
+            mb="0"
+            _peerPlaceholderShown={{
+              transform: "translateY(25%)",
+              color: "gray",
+            }}
+            _peerFocus={{
+              top: 0,
+              left: "sm",
+              transform: "translateY(-50%) scale(0.8)",
+              zIndex: 1,
+              bg: ["white", "black"],
+              color: ["black", "white"],
+            }}
+            css={{
+              "&:not(:placeholder-shown)": {
+                top: 0,
+                left: "sm",
+                transform: "translateY(-50%) scale(0.8)",
+                zIndex: 1,
+                bg: ["white", "black"],
+                color: ["black", "white"],
+              },
             }}
           >
             Email
