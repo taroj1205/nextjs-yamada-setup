@@ -6,7 +6,7 @@ export const FloatingLabel: FC = memo(() => {
   return (
     <VStack>
       <Heading as="h2" fontSize="xl">
-        Filled
+        Outlined
       </Heading>
       <CodeBlock
         code={`
