@@ -17,7 +17,7 @@ export const CodeBlock: FC<PropsWithCode> = memo(async ({ children, code }) => {
       {children}
       <Box position="relative">
         <CopyButton value={formattedCode} />
-        <ScrollArea maxH="xl">
+        <ScrollArea maxH="xl" type="never">
           <Markdown>
             {`
 \`\`\`tsx

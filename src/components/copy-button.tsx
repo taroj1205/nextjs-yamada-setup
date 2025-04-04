@@ -17,7 +17,7 @@ export const CopyButton: FC<PropsWithCode> = memo(({ value }) => {
       position="absolute"
       top="sm"
       right="sm"
-      variant="outline"
+      variant="subtle"
     />
   );
 });
